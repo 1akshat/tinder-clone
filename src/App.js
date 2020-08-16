@@ -4,12 +4,17 @@ import Header from "./Components/Header/Header";
 import HomePage from "./Components/HomePage/HomePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ChatPage from "./Components/ChatPage/ChatPage";
+import ChatScreen from "./Components/ChatPage/ChatScreen/ChatScreen";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
+          <Route path="/chat/:person">
+            <Header backButton="/chat" />
+            <ChatScreen />
+          </Route>
           <Route path="/chat">
             <Header backButton="/" />
             <ChatPage />

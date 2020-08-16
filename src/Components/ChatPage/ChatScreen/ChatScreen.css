@@ -1,0 +1,26 @@
+.chat-screen-text {
+  margin-left: 10px;
+  background-color: lightgray;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.chat-screen-message {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.chat-screen-disclaimer {
+  text-align: center;
+  color: gray;
+  padding: 20px;
+}
+
+.chat-screen-my-text {
+  margin-left: auto;
+  background-color: #29b3cd;
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+}
