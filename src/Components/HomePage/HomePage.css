@@ -19,3 +19,9 @@
 .swipe {
   position: absolute;
 }
+
+.card > h3 {
+  position: absolute;
+  color: white;
+  bottom: 10px;
+}
