@@ -7,14 +7,16 @@ const TinderCards = () => {
   const [people, setPeople] = useState([]);
 
   useEffect(() => {
-    function fetchPeople() {
-      database.collection("people").onSnapshot((snapshot) => {
+    const dettachListener = database
+      .collection("people")
+      .onSnapshot((snapshot) => {
         setPeople(snapshot.docs.map((doc) => doc.data()));
       });
-    }
 
-    fetchPeople();
-  }, []);
+    return () => {
+      dettachListener();
+    };
+  }, [people]);
 
   return (
     <div>
