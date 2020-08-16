@@ -24,3 +24,26 @@
   border-radius: 20px;
   color: white;
 }
+
+.chat-screen-input {
+  display: flex;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid lightgray;
+}
+
+.chat-screen-input-field {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+.chat-screen-input-button {
+  border: none;
+  margin-right: 20px;
+  background-color: white;
+  font-weight: bold;
+  color: #fe3871;
+}
