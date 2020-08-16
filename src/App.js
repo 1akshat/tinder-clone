@@ -3,20 +3,21 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import HomePage from "./Components/HomePage/HomePage";
 import ChatPage from "./Components/ChatPage/Chatpage";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
         <Switch>
-          <Router path="/chat">
+          <Route path="/chat">
+            <Header backButton="/" />
             <ChatPage />
-          </Router>
-          <Router path="/">
+          </Route>
+          <Route path="/">
+            <Header />
             <HomePage />
-          </Router>
+          </Route>
         </Switch>
       </Router>
     </div>
